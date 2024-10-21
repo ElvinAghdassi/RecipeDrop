@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This defines the character set and makes the page mobile-friendly -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Drop</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        
+        <!-- Navigation links to different pages in the app -->
+        <nav>
+            <!-- The main heading of the sile -->
+            <img src="static/images/recipedroplogo.png" alt="">
+            <ul>
+                <li><img src="/static/images/recipedroplogo.png" alt=""></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('view_recipes') }}">View Recipes</a></li>
+                <li><a href="{{ url_for('add_recipes') }}">Add Recipes</a></li>
+            </ul>
+        </nav>
+        <!-- Horizontal line to seperate the navigation from the content -->
+        <hr>
+
+        <!-- Show any flash messages (like succress or error messages) if they exist -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li> <!-- Display each flash message -->
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <!-- This is where other templates can insert their own content -->
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
