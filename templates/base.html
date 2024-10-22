@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         
         <!-- Navigation links to different pages in the app -->
-        <nav>
+        <n                                                                         av>
             <!-- The main heading of the sile -->
-            <img src="static/images/recipedroplogo.png" alt="">
+            
             <ul>
-                <li><img src="/static/images/recipedroplogo.png" alt=""></li>
+                <img src="static/images/recipedroplogo.png" id="logo">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('view_recipes') }}">View Recipes</a></li>
                 <li><a href="{{ url_for('add_recipes') }}">Add Recipes</a></li>

@@ -1,4 +1,58 @@
 .container{
     width: 1920px;
+    background-color: #FDF3E1;
         
+}
+#logo{
+    width: 200px;
+    height: 80px;
+    border-radius: 30px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 8px;
+    float: left;
+    margin-top: 10px;
+    
+}
+ul {    
+    height: 100px;
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D9735B;
+}
+
+li {
+    display: inline;
+}
+li a {
+    background-color: #F4A261;
+    color: #8C3B28;
+    height: 60px;
+    margin-top: 20px;
+    width: 150px;
+    display: block;
+    padding: 30px;
+    margin: 20px, 100px, 20px, 100px;
+}
+
+li a:hover, #homebackground button:hover{
+    background-color: #c4834e;
+    color: #8C3B28;
+}
+#homebackground{
+    width: 1920px;
+}
+#mainbg{
+    height: 980px;
+    width: 1920px;
+    opacity: 60%;margin: 0, auto;
+    position: relative;
+    }
+#titlepage{
+    position: absolute;
+    top: 25%;
+    font-style: jsMath-cmm10;
 }

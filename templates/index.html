@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This defines the character set and makes the page mobile-friendly -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Sales App</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<!-- This template extends the base template, so it inherits the layout from base.html -->
+{% extends 'base.html' %}
+
+<!-- This is the content that will be inserted into the content block in base.html -->
+{% block content %}
+<div id="homebackground">
+    <img src="/static/images/recipedropbg.png" id="mainbg">
+    <div id="titlepage">
+        <h1>Welcome to Recipe Drop</p>
+    </div>
+</div>
+<div id="about">
+<h3>About Us</h3>
+<p id=about>Recipe Drop is a user-friendly website designed to streamline recipe management. With Recipe Drop, users can effortlessly add their favourite recipes to the database, make edits as needed, and easily browse through the collection. Whether you're a seasoned chef or a cooking enthusiast, Recipe Drop provides a convenient platform to store and organize your culinary creations with ease.</p>
+</div>  
+
+
+{% endblock %}
