@@ -12,18 +12,17 @@
     <div class="container">
         
         <!-- Navigation links to different pages in the app -->
-        <n                                                                         av>
+        <nav>                                                                       
             <!-- The main heading of the sile -->
             
             <ul>
-                <img src="static/images/recipedroplogo.png" id="logo">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('view_recipes') }}">View Recipes</a></li>
-                <li><a href="{{ url_for('add_recipes') }}">Add Recipes</a></li>
+                <li><img src="static/images/recipedroplogo.png" id="logo"></li>
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="view_recipes" href="{{ url_for('view_recipes') }}">View Recipes</a></li>
+                <li><a id="add_recipes" href="{{ url_for('add_recipes') }}">Add Recipes</a></li>
             </ul>
         </nav>
         <!-- Horizontal line to seperate the navigation from the content -->
-        <hr>
 
         <!-- Show any flash messages (like succress or error messages) if they exist -->
         {% with messages = get_flashed_messages() %}

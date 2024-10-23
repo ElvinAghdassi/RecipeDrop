@@ -1,3 +1,15 @@
+@font-face {
+    font-family: jsMath-cmmi10;
+    src: url(font/jsMath-cmmi10.ttf) format("truetype");
+}
+@font-face {
+    font-family: inriaserif-italic;
+    src: url(font/InriaSerif-Italic.ttf);
+}
+@font-face {
+    font-family: italiana;
+    src: url(font/Italiana-Regular.ttf);
+}
 .container{
     width: 1920px;
     background-color: #FDF3E1;
@@ -14,8 +26,12 @@
     margin-top: 10px;
     
 }
-ul {    
-    height: 100px;
+nav{
+    width: 1920px;
+}
+ul {
+    width: 1920px;
+    display: inline-block;
     list-style-type: none;
     margin: 0;
     text-align: center;
@@ -25,19 +41,35 @@ ul {
 }
 
 li {
-    display: inline;
+    display: inline-block;
 }
 li a {
     background-color: #F4A261;
     color: #8C3B28;
     height: 60px;
-    margin-top: 20px;
-    width: 150px;
     display: block;
-    padding: 30px;
-    margin: 20px, 100px, 20px, 100px;
+    padding: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-family: italiana;
+    text-decoration: none;
+    font-size: 48px;
 }
+#home{
+    width: 116px;
 
+}
+#view_recipes{
+    width: 270px;
+}
+#add_recipes{
+    width: 240px;
+    
+}
+li img{
+    width: 204px;
+    float: left ;
+}
 li a:hover, #homebackground button:hover{
     background-color: #c4834e;
     color: #8C3B28;
@@ -54,5 +86,35 @@ li a:hover, #homebackground button:hover{
 #titlepage{
     position: absolute;
     top: 25%;
-    font-style: jsMath-cmm10;
+    margin-left: 40px;
+}
+#main_head{
+    font-family: jsMath-cmmi10;
+    width: 630px;
+    height: 487px;
+    font-size: 128px;
+
+}
+#about_head{
+    width: 261px;
+    height: 75px;
+    font-family: inriaserif-italic;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #D9735B;
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 64px;
+}
+#about_text{
+    width: 1820px;
+    height: 293px;
+    border-radius: 15px;
+    background-color: #D9735B;
+    text-align: center;
+    padding: 32.5px;
+    font-family: inriaserif-italic;
+    font-size: 48px;
+
 }
