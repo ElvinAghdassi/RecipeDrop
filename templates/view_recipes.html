@@ -1,0 +1,39 @@
+    <!-- Extending the base layout -->
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <!-- background image for the recipes list -->
+    <img src="/static/images/viewrecipiesbg.png" id="view_recipesbg">
+    <!-- Table to display the list of recipes -->
+    <table class="recipe_table">
+        <thead>
+            <tr>
+                <th>Recipe Id</th>
+                <th>Recipe Name</th>
+                <th>Ingredients</th>
+                <th>Method</th>
+                <th>Actions</th> <!-- Column for edit/delete actions -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the Recpies data passed from the Flask app and display each recipe -->
+            {% for game in games %}
+            <tr>
+                <td>{{ recipe.recipe_id }}</td> <!-- Recipe ID -->
+                <td>{{ recipe.recipe_name }}</td> <!-- Recipe Name -->
+                <td>{{ recipe.ingredients }}</td> <!-- Ingredients for Recipe -->
+                <td>{{ recipe.method }}</td> <!-- Recipe method -->
+                <td>
+                    <!-- Links to edit or delete the game -->
+                    <a href="{{ url_for('edit_recipe', id=recipe.recipe_id) }}">Edit</a>
+                    <!-- Form to delete the game (since deleting is usually done with POST) -->
+                    <form action="{{ url_for('delete_recipe', id=recipe.recipe_id) }}" method="post" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    {% endblock %}

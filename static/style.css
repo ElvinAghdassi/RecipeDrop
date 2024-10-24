@@ -24,6 +24,7 @@
     margin-left: 8px;
     float: left;
     margin-top: 10px;
+    margin-bottom: 10px;
     
 }
 nav{
@@ -54,6 +55,8 @@ li a {
     font-family: italiana;
     text-decoration: none;
     font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 #home{
     width: 116px;
@@ -63,7 +66,7 @@ li a {
     width: 270px;
 }
 #add_recipes{
-    width: 240px;
+    width: 266px;
     
 }
 li img{
@@ -117,4 +120,93 @@ li a:hover, #homebackground button:hover{
     font-family: inriaserif-italic;
     font-size: 48px;
 
+}
+
+#view_recipesbg{
+    width: 1920px;
+    height: 980px;
+    opacity: 75%;
+
+}
+/* Table styling */
+.recipe_table {
+    width: 90%; /* Adjusted width to fit content better */
+    max-width: 1200px; /* Limit the maximum width of the table */
+    margin: 20px auto; /* Centering the table with auto margins */
+    border-collapse: collapse;
+    font-size: 16px; /* Font size for table content */
+    background-color: #BD6752; /* White background for the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+    left: 400px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 1px;
+}
+
+/* Table header styling */
+table thead {
+    background-color: #F4A261; /* Dark background for the header */
+    color: #FFFFFF; /* White text color */;
+}
+
+table th {
+    padding: 15px; /* Padding for table header cells */
+    text-align: left; /* Align text to the left */
+    font-family: italiana;
+    font-size: 48px;
+    border-color: white;
+    border-style: solid ;
+    border-width: 1px;
+}
+
+/* Table body styling */
+table tbody tr:nth-child(even) {
+    background-color: #F4A261   ; /* Light gray background for even rows */
+}
+
+table tbody tr:hover {
+    background-color: #c4834e; /* Light gray background on hover */
+}
+
+table td {
+    padding: 12px; /* Padding for table cells */
+    border-color: white;
+    border-style: solid ;
+    border-width: 1px;
+    
+}
+
+/* Link styling within tables */
+table a {
+    color: #3498db; /* Blue color for links */
+    text-decoration: none;
+    margin-right: 10px; /* Spacing between links */
+}
+
+table a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+/* Form button styling */
+form button {
+    background-color: #e74c3c; /* Red background for delete button */
+    color: white;
+    border: none;
+    padding: 6px 12px; /* Padding for button */
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+form button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* General form styling */
+form {
+    display: inline; /* Ensure form is displayed inline with other elements */
+    margin: 0; /* Remove default margins */
 }

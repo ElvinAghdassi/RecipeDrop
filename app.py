@@ -90,22 +90,22 @@ def add_recipes():
 def edit_recipe(id):
     # Connect to the database and get the game with the given id
     conn = get_db_connection()
-    game = conn.execute('SELECT * FROM recipes WHERE id = ?', (id,)).fetchone()
+    recipes = conn.execute('SELECT * FROM recipes WHERE id = ?', (id,)).fetchone()
 
     # If the form was submitted (POST request)
     if request.method == 'POST':
         # Get the updated data from the form
-        recipe_name = request.form['recipe name']
+        name = request.form['name']
         ingredients = request.form['ingredients']
         method = request.form['method']
 
         # If any field is missing, show an error message
-        if not recipe_name or not ingredients or not method:
+        if not name or not ingredients or not method:
             flash('All fields are required!')
         else:
             # Update the game in the database with the new data
-            conn.execute('UPDATE games SET recipe_name = ?, ingredients = ?, method = ?',
-                        (recipe_name, ingredients, method, id))
+            conn.execute('UPDATE games SET name = ?, ingredients = ?, method = ?',
+                        (name, ingredients, method, id))
             # Save the changes to the database
             conn.commit()
             # Close the connection
@@ -115,7 +115,7 @@ def edit_recipe(id):
 
     # If it's a GET request, show the form with the existing
     # game data so the user can edit it
-    return render_template('edit_recipe.html', game=game)
+    return render_template('edit_recipe.html', recipe=recipe)
 
 # Run the Flask app in debug mode (so we can see errors easily while developing)
 if __name__ == '__main__':
