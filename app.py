@@ -60,19 +60,19 @@ def add_recipes():
     # If the form was submitted (POST request)
     if request.method == 'POST':
         # Get form data: title, platform, genre, year, sales
-        recipe_name = request.form['recipe name']
+        name = request.form['recipe name']
         ingredients = request.form['ingredients']
         method = request.form['method']
 
         # If any field is missing, show an error message
-        if not recipe_name or not ingredients or not method:
+        if not name or not ingredients or not method:
             flash('All fields are required!')
         else:
             # If everything is filled in, insert the new game into the
             # database
             conn = get_db_connection()
             conn.execute('INSERT INTO recipes (recipe_name, ingredients, method) VALUES (?, ?, ?, ?, ?)',
-                        (recipe_name, ingredients, method))
+                        (name, ingredients, method))
             # Save the changes to the database
             conn.commit()
             # Close the connection
@@ -90,7 +90,7 @@ def add_recipes():
 def edit_recipe(id):
     # Connect to the database and get the game with the given id
     conn = get_db_connection()
-    recipes = conn.execute('SELECT * FROM recipes WHERE id = ?', (id,)).fetchone()
+    recipe   = conn.execute('SELECT * FROM recipes WHERE id = ?', (id,)).fetchone()
 
     # If the form was submitted (POST request)
     if request.method == 'POST':

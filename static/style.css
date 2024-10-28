@@ -209,4 +209,11 @@ form button:hover {
 form {
     display: inline; /* Ensure form is displayed inline with other elements */
     margin: 0; /* Remove default margins */
+    float: left;
+}
+
+#formbg{
+    float: left;
+    height: 960px;
+    padding-right: 20px ;
 }
