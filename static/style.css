@@ -208,12 +208,63 @@ form button:hover {
 /* General form styling */
 form {
     display: inline; /* Ensure form is displayed inline with other elements */
-    margin: 0; /* Remove default margins */
-    float: left;
+    margin: 0;
+    align-items: center;
 }
 
 #formbg{
     float: left;
-    height: 960px;
     padding-right: 20px ;
+    width: 887px;
+}
+#form_container{
+    width: 992px;
+    height: 705px;
+    background-color: #BD6752;
+    margin: auto;
+    float: left;
+}
+#add_title  {
+    width: 256px;
+    height: 57px;
+    font-family: italiana;
+    font-size: 48px;
+    padding: 17.5px 54.5px 17.5px 54.5px;
+    background-color: #F4A261;
+    border-radius: 15px;
+    color: white;
+    
+}
+#name_title{
+    width: 265px;
+    font-size: 48px;
+    font-family: italiana;
+    padding: 17.5px 67.5px 17.5px 67.5px;
+    border-radius: 15px;
+    background-color: #F4A261;
+    color: white;
+    height: 57px;
+
+}
+#ing_title{
+    width: 226px;
+    font-size: 48px;
+    font-family: italiana;
+    padding: 16.5px 87px 16.5px 87px;
+    border-radius: 15px;
+    background-color: #F4A261;
+    color: white;
+    height: 57px;
+    border-color: black;
+}
+#method_title{
+    height: 57px;
+    width: 157px;
+    font-size: 48px;
+    padding: 17.5px 121.5px 17.5px 121.5px;
+    font-family: italiana;
+    border-radius: 15px;
+    background-color: #F4A261;
+    color: white;
+
 }

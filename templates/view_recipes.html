@@ -17,10 +17,10 @@
         </thead>
         <tbody>
             <!-- Loop through the Recpies data passed from the Flask app and display each recipe -->
-            {% for game in games %}
+            {% for recipe in recipes %}
             <tr>
                 <td>{{ recipe.recipe_id }}</td> <!-- Recipe ID -->
-                <td>{{ recipe.recipe_name }}</td> <!-- Recipe Name -->
+                <td>{{ recipe.name }}</td> <!-- Recipe Name -->
                 <td>{{ recipe.ingredients }}</td> <!-- Ingredients for Recipe -->
                 <td>{{ recipe.method }}</td> <!-- Recipe method -->
                 <td>
