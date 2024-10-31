@@ -29,9 +29,9 @@ def view_recipes():
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM recipes")
-    games = cursor.fetchall()
+    recipes = cursor.fetchall()
     conn.close()
-    return render_template('view_recipes.html', games=games)
+    return render_template('view_recipes.html', recipes=recipes)
 
 @app.route('/delete/<int:id>', methods=('GET', 'POST'))
 def delete_recipe(id):
@@ -90,7 +90,7 @@ def add_recipes():
 def edit_recipe(id):
     # Connect to the database and get the game with the given id
     conn = get_db_connection()
-    recipe   = conn.execute('SELECT * FROM recipes WHERE id = ?', (id,)).fetchone()
+    recipe = conn.execute('SELECT * FROM recipes WHERE id = ?', (id,)).fetchone()
 
     # If the form was submitted (POST request)
     if request.method == 'POST':

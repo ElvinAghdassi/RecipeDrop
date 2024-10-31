@@ -144,6 +144,7 @@ li a:hover, #homebackground button:hover{
     border-style: solid;
     border-color: #FFFFFF;
     border-width: 1px;
+    color: white;
 }
 
 /* Table header styling */
@@ -163,9 +164,6 @@ table th {
 }
 
 /* Table body styling */
-table tbody tr:nth-child(even) {
-    background-color: #F4A261   ; /* Light gray background for even rows */
-}
 
 table tbody tr:hover {
     background-color: #c4834e; /* Light gray background on hover */
@@ -267,4 +265,17 @@ form {
     background-color: #F4A261;
     color: white;
 
+}
+.inputs{
+    width: 375px;
+    height: 80px;
+    font-size: 40px;
+    font-family: italiana;
+}
+#add_form{
+    width: 990px;
+    height: 705px;
+    background-color: #BD6752;
+    float: right;
+    margin-right: 20px;
 }
