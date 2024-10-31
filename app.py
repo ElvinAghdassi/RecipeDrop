@@ -104,7 +104,7 @@ def edit_recipe(id):
             flash('All fields are required!')
         else:
             # Update the game in the database with the new data
-            conn.execute('UPDATE games SET name = ?, ingredients = ?, method = ?',
+            conn.execute('UPDATE recipes SET name = ?, ingredients = ?, method = ? WHERE id = ?',
                         (name, ingredients, method, id))
             # Save the changes to the database
             conn.commit()
