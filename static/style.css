@@ -24,6 +24,9 @@
     margin-left: 8px;
     float: left;
     margin:auto;
+    position: relative;
+    top: 22px;
+    left: -100px;
     
 }
 nav{
@@ -187,8 +190,8 @@ table a:hover {
     text-decoration: underline; /* Underline on hover */
 }
 /* Form button styling */
-form button {
-    background-color: #e74c3c; /* Red background for delete button */
+#form_button {
+    background-color: #D9735B; /* Red background for delete button */
     color: white;
     border: none;
     padding: 6px 12px; /* Padding for button */
@@ -196,23 +199,28 @@ form button {
     border-radius: 4px; /* Rounded corners */
     font-size: 14px; /* Font size */
     transition: background-color 0.3s ease; /* Smooth background color transition */
+    width: 380px;
+    font-size: 48px;
+    font-family: italiana;
+    border-radius: 15px;
+    position: absolute;
+    left: 1260px;
+    top: 900px;
 }
 
-form button:hover {
-    background-color: #c0392b; /* Darker red on hover */
+#form_button:hover {
+    background-color: #c4834e; /* Darker red on hover */
 }
 
 /* General form styling */
 form {
-    display: inline; /* Ensure form is displayed inline with other elements */
-    margin: 0;
+    display: list-item flex; /* Ensure form is displayed inline with other elements */
     align-items: center;
 }
 
 #formbg{
-    float: left;
-    padding-right: 20px ;
-    width: 887px;
+position: relative;
+width: 887px;
 }
 #form_container{
     width: 992px;
@@ -230,6 +238,10 @@ form {
     background-color: #F4A261;
     border-radius: 15px;
     color: white;
+    position: absolute;
+    left: 1268px;
+    top: 169px;
+
     
 }
 #name_title{
@@ -241,7 +253,15 @@ form {
     background-color: #F4A261;
     color: white;
     height: 57px;
+    position: absolute;
+    left: 1010px;
+    top: 356px;
 
+}
+#name{
+    position: absolute;
+    left: 1020px;
+    top: 455px;
 }
 #ing_title{
     width: 226px;
@@ -253,6 +273,14 @@ form {
     color: white;
     height: 57px;
     border-color: black;
+    position: absolute;
+    left: 1500px;
+    top: 356px;
+}
+#ingredients{
+    position: absolute;
+    top: 455px;
+    left: 1510px;
 }
 #method_title{
     height: 57px;
@@ -263,6 +291,15 @@ form {
     border-radius: 15px;
     background-color: #F4A261;
     color: white;
+    position: absolute;
+    left: 1250px;
+    top: 657px;
+
+}
+#method{
+    position: absolute;
+    left: 1260px;
+    top: 770px;
 
 }
 .inputs{
@@ -271,10 +308,17 @@ form {
     font-size: 40px;
     font-family: italiana;
 }
-#add_form{
-    width: 990px;
-    height: 705px;
-    background-color: #BD6752;
-    float: right;
-    margin-right: 20px;
+.delete {
+    background-color: #e74c3c; /* Red background for delete button */
+    border: none;
+    padding: 6px 12px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    color: white;
+    
+   
+}
+
+.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
 }

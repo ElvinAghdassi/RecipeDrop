@@ -10,17 +10,17 @@
 <!-- Form to update the game details -->
 <form method="post">
     <!-- Input fields with the current game data filled in -->
-    <label for="title">Recipe Name</label>
+    <label for="title" id="name_title">Recipe Name</label>
     <input type="text" name="name" id="name" value="{{ recipe.name }}" required><br><br> <!-- Current title -->
 
-    <label for="title">Ingredients</label>
+    <label for="title" id="ing_title">Ingredients</label>
     <input type="text" name="ingredients" id="ingredients" value="{{ recipe.ingredients }}" required><br><br> <!-- Current platform -->
 
-    <label for="title">Method</label>
+    <label for="title" id="method_title">Method</label>
     <input type="text" name="method" id="method" value="{{ recipe.method }}" required><br><br> <!-- Current genre -->
 
     
     <!-- Button to submit the updated game details -->
-    <button class="submitformbutton" type="submit">Update Recipe</button>
+    <button class="submitformbutton" type="submit" id="form_button">Update Recipe</button>
 </form>
 {% endblock %}

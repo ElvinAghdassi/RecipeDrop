@@ -28,7 +28,7 @@
                     <a href="{{ url_for('edit_recipe', id=recipe.id) }}">Edit</a>
                     <!-- Form to delete the game (since deleting is usually done with POST) -->
                     <form action="{{ url_for('delete_recipe', id=recipe.id) }}" method="post" style="display:inline;">
-                        <button type="submit">Delete</button>
+                        <button class="delete" type="submit">Delete</button>
                     </form>
                 </td>
             </tr>
