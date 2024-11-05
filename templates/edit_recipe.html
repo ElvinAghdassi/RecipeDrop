@@ -4,23 +4,23 @@
 {% block content %}
 
 <img src="/static/images/recipedropformbg.png" id="formbg">
-<!-- Heading for the edit game form -->
+<!-- Heading for the edit recipe form -->
 <h2>Edit Recipe</h2>
 
-<!-- Form to update the game details -->
+<!-- Form to update the recipe details -->
 <form method="post">
     <!-- Input fields with the current game data filled in -->
     <label for="title" id="name_title">Recipe Name</label>
-    <input type="text" name="name" id="name" value="{{ recipe.name }}" required><br><br> <!-- Current title -->
+    <input type="text" name="name" id="name" value="{{ recipe.name }}" required><br><br> <!-- Current name -->
 
     <label for="title" id="ing_title">Ingredients</label>
-    <input type="text" name="ingredients" id="ingredients" value="{{ recipe.ingredients }}" required><br><br> <!-- Current platform -->
+    <input type="text" name="ingredients" id="ingredients" value="{{ recipe.ingredients }}" required><br><br> <!-- Current ingredients -->
 
     <label for="title" id="method_title">Method</label>
-    <input type="text" name="method" id="method" value="{{ recipe.method }}" required><br><br> <!-- Current genre -->
+    <input type="text" name="method" id="method" value="{{ recipe.method }}" required><br><br> <!-- Current method -->
 
     
-    <!-- Button to submit the updated game details -->
+    <!-- Button to submit the updated recipe details -->
     <button class="submitformbutton" type="submit" id="form_button">Update Recipe</button>
 </form>
 {% endblock %}

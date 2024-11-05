@@ -4,20 +4,20 @@
 {% block content %}
 
 <img src="/static/images/recipedropformbg.png" id="formbg">
-<!-- Heading for the add game form -->
+<!-- Heading for the add recipe form -->
     <h2 id="add_title">Add Recipes</h2>
 
-    <!-- Form to submit a new game -->
+    <!-- Form to submit a new recipe -->
     <form method="post">
         <!-- Input fields for the game details -->
         <label for="title" id="name_title">Recipe Name</label>
-        <input type="text" name="name" id="name" class="inputs" required><br><br> <!-- Game title -->
+        <input type="text" name="name" id="name" class="inputs" required><br><br> <!-- Recipe name -->
 
         <label for="title" id="ing_title">Ingredients</label>
-        <input type="text" name="ingredients" id="ingredients" class="inputs" required><br><br> <!-- Game platform -->
+        <input type="text" name="ingredients" id="ingredients" class="inputs" required><br><br> <!-- Recipe ingredients -->
 
         <label for="title" id="method_title">Method</label>
-        <input type="text" name="method" id="method" class="inputs" required><br><br> <!-- Game genre -->
+        <input type="text" name="method" id="method" class="inputs" required><br><br> <!-- Recipe method -->
 
         <!-- Button to submit the form -->
         <button class="submitformbutton" type="submit" id="form_button">Add Recipe</button>

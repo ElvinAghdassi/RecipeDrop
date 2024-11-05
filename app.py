@@ -9,7 +9,7 @@ app.secret_key = "supersecretkey"
 
 # Function to connect to the SQLite database
 def get_db_connection():
-    # Connect to 'games.db' database - or whatever you have called it
+    # Connect to 'recipes.db' database
     conn = sqlite3.connect('recipes.db')
     # This makes it easier to access rows as dictionaries and the
     # data by the field heading rather than numbers
@@ -25,7 +25,7 @@ def index():
 # Route to view all games
 @app.route('/recipes')
 def view_recipes():
-    # Render the 'view_games.html' template and display it in the browser
+    # Render the 'view_recipes.html' template and display it in the browser
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM recipes")
@@ -40,13 +40,13 @@ def delete_recipe(id):
 
     # If the form was submitted (POST request)
     if request.method == 'POST':
-        # Delete the game from the database
+        # Delete the recipe from the database
         conn.execute('DELETE FROM recipes WHERE id = ?', (id,))
         # Save the changes to the database
         conn.commit()
         # Close the connection
         conn.close()
-        # Redirect to the 'view_games' page
+        # Redirect to the 'view_recipes' page
         return redirect(url_for('view_recipes'))
 
     # If it's a GET request, show the form with the existing
@@ -59,7 +59,7 @@ def delete_recipe(id):
 def add_recipes():
     # If the form was submitted (POST request)
     if request.method == 'POST':
-        # Get form data: title, platform, genre, year, sales
+        # Get form data: name, ingredients, method
         name = request.form['name']
         ingredients = request.form['ingredients']
         method = request.form['method']
@@ -77,7 +77,7 @@ def add_recipes():
             conn.commit()
             # Close the connection
             conn.close()
-            # Redirect to the 'view_games' page
+            # Redirect to the 'view_recipes' page
             return redirect(url_for('view_recipes'))
 
     # If it's a GET request (the user is just visiting the page),
@@ -103,14 +103,14 @@ def edit_recipe(id):
         if not name or not ingredients or not method:
             flash('All fields are required!')
         else:
-            # Update the game in the database with the new data
+            # Update the recipes in the database with the new data
             conn.execute('UPDATE recipes SET name = ?, ingredients = ?, method = ? WHERE id = ?',
                         (name, ingredients, method, id))
             # Save the changes to the database
             conn.commit()
             # Close the connection
             conn.close()
-            # Redirect to the 'view_games' page
+            # Redirect to the 'view_recipes' page
             return redirect(url_for('view_recipes'))
 
     # If it's a GET request, show the form with the existing
